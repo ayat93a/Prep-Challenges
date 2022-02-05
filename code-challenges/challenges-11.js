@@ -72,7 +72,9 @@ function fullName(arr) {
 //  
 
 // EX:
+
 // var students = [
+
 // 	{
 // 			firstName: 'Adam',
 //      lastName: 'Anderson',
@@ -201,7 +203,9 @@ function gradesAvg(arr) {
 //]
 // -------------
 
+
 function studentsResult(arr) {
+
     arr.map(item => {
         let sum = 0
          item.gradsList.forEach(sumation);
@@ -217,6 +221,8 @@ function studentsResult(arr) {
             item.result = 'Failed'
         }
     })
+
 }
+
 
 module.exports = { square, fullName, gradesAvg, studentsResult };
