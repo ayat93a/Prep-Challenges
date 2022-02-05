@@ -15,16 +15,15 @@
 // ------------------------
 
 const oddFiltration = (arr) => {
-     let filtration = [];
+    let filtration = [];
     const odd =arr.filter(oddNum);
     function oddNum (number){
             if (number % 2 !== 0){
                 filtration.push(number)
             }
-                return filtration;
-        } 
+             
+         } 
 }
-
 
 // 2) ---------------------
 // 
@@ -74,12 +73,23 @@ const oddFiltration = (arr) => {
 // ------------------------
 
 const cvsFiltration = (arr) => {
-  ]
+    let result = {fullName : "" , tech : ""}
+    arr.map(item =>{
+        if (item.firstName !== null && item.LastName !==null && item.yearsOfExperience >4 ){
+            result.fullName = item.firstName + ' ' + item.LastName
+        }
+        arr.filter(checkJs)
+        function checkJs (item){
+         if (item.tech==="JS"){
+             result.tech = "JS"
+             return result.tech 
+         }} 
+        }) 
 }
 
 // 3) ---------------------
 //
-// Given an array of words filter the names that contains one of the vowels (a, e, i, o, u)
+// Given an array of words filter out the words that contains one of the vowels (a, e, i, o, u)
 
 // EX:
 // ['car', 'boy', 'spy', 'building', 'why', 'dry' ] ==> ['spy', 'why', 'dry']
@@ -87,7 +97,9 @@ const cvsFiltration = (arr) => {
 // ------------------------
 
 const vowelsFiltration = (arr) => {
-    // write your code here
+    // arr = ['car', 'boy', 'spy', 'building', 'why', 'dry' ]
+    // let result = Object.assign({},arr)
+    // console.log(result)
 } 
 
 // 4) ---------------------
@@ -105,7 +117,7 @@ const vowelsFiltration = (arr) => {
 // ------------------------
 
 const skillComparison = (arr1, arr2) => {
-    // write your code here
+    
 }
 
 
