@@ -16,13 +16,12 @@
 // -------------
 
 function square(arr) {
-   const squareArr  = arr.map(myFunction); 
-   function myFunction(num) {
-    return num* num;
-  }
-  return squareArr
-}
-
+        const squareArr  = arr.map(myFunction); 
+        function myFunction(num) {
+         return num* num;
+       }
+       return squareArr
+     }
 
 // 2) ------------------
 //
@@ -66,9 +65,6 @@ function fullName(arr) {
     })
 }
 
-
-
-
 // 3) ---------------------
 // 
 // Given an array of objects use map to calculate the average of the grades 
@@ -76,7 +72,9 @@ function fullName(arr) {
 //  
 
 // EX:
- //var students = [
+
+// var students = [
+
 // 	{
 // 			firstName: 'Adam',
 //      lastName: 'Anderson',
@@ -205,7 +203,9 @@ function gradesAvg(arr) {
 //]
 // -------------
 
- function studentsResult(arr) {
+
+function studentsResult(arr) {
+
     arr.map(item => {
         let sum = 0
          item.gradsList.forEach(sumation);
@@ -221,6 +221,8 @@ function gradesAvg(arr) {
             item.result = 'Failed'
         }
     })
- }
+
+}
+
 
 module.exports = { square, fullName, gradesAvg, studentsResult };
