@@ -15,7 +15,14 @@
 // ------------------------
 
 const oddFiltration = (arr) => {
-    // write your code here
+    let filtration = [];
+    const odd =arr.filter(oddNum);
+    function oddNum (number){
+            if (number % 2 !== 0){
+                filtration.push(number)
+            }
+             
+         } 
 }
 
 // 2) ---------------------
@@ -66,7 +73,18 @@ const oddFiltration = (arr) => {
 // ------------------------
 
 const cvsFiltration = (arr) => {
-    // write your code here
+    let result = {fullName : "" , tech : ""}
+    arr.map(item =>{
+        if (item.firstName !== null && item.LastName !==null && item.yearsOfExperience >4 ){
+            result.fullName = item.firstName + ' ' + item.LastName
+        }
+        arr.filter(checkJs)
+        function checkJs (item){
+         if (item.tech==="JS"){
+             result.tech = "JS"
+             return result.tech 
+         }} 
+        }) 
 }
 
 // 3) ---------------------
@@ -79,7 +97,9 @@ const cvsFiltration = (arr) => {
 // ------------------------
 
 const vowelsFiltration = (arr) => {
-    // write your code here
+    // arr = ['car', 'boy', 'spy', 'building', 'why', 'dry' ]
+    // let result = Object.assign({},arr)
+    // console.log(result)
 } 
 
 // 4) ---------------------
@@ -97,7 +117,7 @@ const vowelsFiltration = (arr) => {
 // ------------------------
 
 const skillComparison = (arr1, arr2) => {
-    // write your code here
+    
 }
 
 
