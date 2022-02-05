@@ -15,16 +15,8 @@
 // ------------------------
 
 const oddFiltration = (arr) => {
-     let filtration = [];
-    const odd =arr.filter(oddNum);
-    function oddNum (number){
-            if (number % 2 !== 0){
-                filtration.push(number)
-            }
-                return filtration;
-        } 
+    // write your code here
 }
-
 
 // 2) ---------------------
 // 
@@ -74,12 +66,12 @@ const oddFiltration = (arr) => {
 // ------------------------
 
 const cvsFiltration = (arr) => {
-  ]
+    // write your code here
 }
 
 // 3) ---------------------
 //
-// Given an array of words filter the names that contains one of the vowels (a, e, i, o, u)
+// Given an array of words filter out the words that contains one of the vowels (a, e, i, o, u)
 
 // EX:
 // ['car', 'boy', 'spy', 'building', 'why', 'dry' ] ==> ['spy', 'why', 'dry']
