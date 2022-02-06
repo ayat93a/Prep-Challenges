@@ -63,6 +63,7 @@ function fullName(arr) {
     arr.map(item =>{
 	    result.push(item.firstName + " " + item.lastName)
     })
+    return result
 }
 
 // 3) ---------------------
@@ -126,14 +127,16 @@ function fullName(arr) {
 // -------------
 
 function gradesAvg(arr) {
-    arr.map(item => {
-        let sum = 0
-        item.gradsList.forEach(sumation);
-        function sumation (element){
-            sum += element
-         item.avg =sum / item.gradsList.length
-        }
+    arr.map(item =>{
+        item.gradsList.map (element =>{
+            let sum = 0
+          for (let i =0 ; i <(item.gradsList.length); i++){
+              sum = sum + item.gradsList[i]
+              item.avg = sum /(item.gradsList.length)
+          }
+        })
     })
+    return arr
 }
 
 
@@ -155,13 +158,13 @@ function gradesAvg(arr) {
 // 			firstName: 'Ben',
 //      lastNAme: 'Zeller',
 // 			gradsList: [20,10,11,11,2,5,3,2],
-//			avg: 8
+// 			avg: 8
 // },
 // {
 // 			firstName: 'Peter',
 //      lastName: 'Mccord',
 // 	    gradsList: [62,50,80,90,39,45,60,50],
-//			avg: 59.5
+// 			avg: 59.5
 // },
 // {
 // 			firstName: 'Fred',
@@ -169,7 +172,7 @@ function gradesAvg(arr) {
 // 			gradsList: [20,10,18,11,2,20,3,10],
 //      avg: 11.75
 // 	}
-//]
+// ]
 // results =>
 //[
 // 	{
@@ -222,7 +225,8 @@ function studentsResult(arr) {
         }
     })
 
-}
+    return arr
+ }
 
 
 module.exports = { square, fullName, gradesAvg, studentsResult };
