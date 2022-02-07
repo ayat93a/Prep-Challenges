@@ -15,6 +15,7 @@
 // ------------------------
 
 const oddFiltration = (arr) => {
+
     let odd = arr.filter(item=>(item%2)!==0 )
     return odd 
 }
@@ -67,6 +68,7 @@ const oddFiltration = (arr) => {
 // ------------------------
 
 const cvsFiltration = (arr) => {
+
     let cvsFiltration = []
     let candidite={fullName: "" , tech: ""};
     let result = arr.filter(item => item.firstName !== null && item.LastName !== null && item.yearsOfExperience >4 && item.tech == "JS");
@@ -76,6 +78,7 @@ const cvsFiltration = (arr) => {
             cvsFiltration.push(candidite);
         })
     return cvsFiltration
+
 }
 
 // 3) ---------------------
@@ -108,12 +111,14 @@ const vowelsFiltration = (arr) => {
 // ------------------------
 
 const skillComparison = (arr1, arr2) => {
+
     let skillComparison = arr1.concat(arr2)
     .filter(function (item, index, array) {
   let notCommon= array.indexOf(item) == array.lastIndexOf(item);
   return notCommon
      })
          return  skillComparison
+
 }
 
 
