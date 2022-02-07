@@ -81,15 +81,14 @@ str = strArray.join(" ")
 // ------------------------
 
 const arrToStr = (arr) => {
-    let arr1;
-    let arr2;
-    for(let i =5 ; i<arr.length ; i=i+5){
-        arr.splice(i , 1 ,',', arr[i])
-       arr1 = arr.slice(0,i)
-         arr2 =arr.slice((i++),(arr.length))   
-  }
-  let str = arr1.join(' ') + arr2.join(' ')
-return str
+   return arr.map((item, index , arr) =>{
+    if ((index + 1) %5 === 0){
+        return `${item},`
+    } else {
+        return item;
+    }
+   }).join(" ")
+
 }
 
 // 5) ---------------------
@@ -105,7 +104,17 @@ return str
 // ------------------------
 
 const letterCounter = (str) => {
-    // write your code here
+    str.split(" ").forEach(word =>{
+        let counter = 1;
+        let char = word[0];
+        for(let i=0; i <word.length -1 ; i++){
+            if (word [i] === word [i+1])
+            counter++;
+         else 
+            break;
+        }
+    })
+    return  ; 
 }
 
 
