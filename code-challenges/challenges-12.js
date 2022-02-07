@@ -91,9 +91,7 @@ const cvsFiltration = (arr) => {
 // ------------------------
 
 const vowelsFiltration = (arr) => {
-    // arr = ['car', 'boy', 'spy', 'building', 'why', 'dry' ]
-    // let result = Object.assign({},arr)
-    // console.log(result)
+  return arr.filter(word => !/(a|e|i|o|u)/g.test(word))
 } 
 
 // 4) ---------------------
