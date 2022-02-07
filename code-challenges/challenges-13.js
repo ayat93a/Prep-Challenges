@@ -6,11 +6,13 @@
 // Resource:
 // Reduce: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
 
-// 1) ---------------------
+// -------------------------------------------------------------------------------------------------------
+// Challenge 01:
+// Required:
 // 
-//  Given an array of objects, count the objects by using reduce method.
+// Given an array of objects, count the objects by using reduce method.
 
-//  EX:
+// Input:
 // var voters = [
 //     {
 //         voter_Name: "Adam Scott",
@@ -34,20 +36,24 @@
 //     }
 // ]
 //
-
-// ------------------------
+// Output: 5
 
 const objectCounter = (obj) => {
-    // write your code here
+    let sum = 1
+    obj.reduce((previous , current) => sum++ ) ;
+    return sum;
 
 }
+// -------------------------------------------------------------------------------------------------------
 
-// 2) ---------------------
+// -------------------------------------------------------------------------------------------------------
+// Challenge 02:
+// Required:
 // 
 // Given a string input as an argument reverse it using reduce method.
 //
-//  EX:
-// 'you shall not pass' ==> 'pass not shall you'
+// Input: 'you shall not pass' 
+// Output: 'pass not shall you'
 //
 // Hint:
 // since you need to reverse words, you may get some use of the methods
@@ -56,13 +62,18 @@ const objectCounter = (obj) => {
 // ------------------------
 
 const stringReverse = (str) => {
-    // write your code here
-
+       return str.split(" ").reduce((previous , current ) => {
+           return `${current} ${previous}`.trim();
+       })
+        
 }
+// -------------------------------------------------------------------------------------------------------
 
-// 3) ---------------------
+// -------------------------------------------------------------------------------------------------------
+// Challenge 03:
+// Optional:
 // 
-// Using the same array of object from the first question, create new object that contain the candidates name as keys (voting for),
+// Using the same array of objects from the first question, create new object that contains the candidates names as keys (voting for),
 // and how many times they got voted to as values using the reduce method.
 //
 // Input:
@@ -96,13 +107,11 @@ const stringReverse = (str) => {
 //     Bailey: 2
 // };
 //
-// ------------------------
 
 const statistics = (obj) => {
     // write your code here
 }
-
+// -------------------------------------------------------------------------------------------------------
 
 
 module.exports = { objectCounter, stringReverse, statistics };
-

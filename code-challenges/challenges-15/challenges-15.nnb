@@ -24,7 +24,9 @@
         {
             "language": "javascript",
             "source": [
+
                 "let freq = new Map()\nfor(let i = 0; i < arr.length ; i++){\n    if(freq.has(arr[i])){\n        freq.set(arr[i], freq.get(arr[i]) + 1)\n    }else{\n        freq.set(arr[i], 1)\n    }\n}\n let max_freq = Number.MIN_SAFE_INTEGER;\nfor(let entry of freq)\n    max_freq = Math.max(max_freq, entry[1]);\n    return (arr.length - max_freq) ;"
+
             ],
             "outputs": []
         },
