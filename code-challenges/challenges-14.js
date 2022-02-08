@@ -81,15 +81,7 @@ str = strArray.join(" ")
 // ------------------------
 
 const arrToStr = (arr) => {
-    let arr1;
-    let arr2;
-    for(let i =5 ; i<arr.length ; i=i+5){
-        arr.splice(i , 1 ,',', arr[i])
-       arr1 = arr.slice(0,i)
-         arr2 =arr.slice((i++),(arr.length))   
-  }
-  let str = arr1.join(' ') + arr2.join(' ')
-return str
+    return arr.map (item=> arr.indexOf(item)==4? `${item},`:item).join(" ");
 }
 
 // 5) ---------------------
