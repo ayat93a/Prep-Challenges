@@ -81,16 +81,11 @@ str = strArray.join(" ")
 // ------------------------
 
 const arrToStr = (arr) => {
-   return arr.map((item, index , arr) =>{
-    if ((index + 1) %5 === 0){
-        return `${item},`
-    } else {
-        return item;
-    }
-   }).join(" ")
 
-}
 
+ return arr.map (item=> arr.indexOf(item)==4? `${item},`:item).join(" ");
+       }
+       
 // 5) ---------------------
 // 
 // Simon got a string manipulation question for his interview, it asked him to replace the duplicated letters in a string to an indicator and counter
@@ -104,18 +99,10 @@ const arrToStr = (arr) => {
 // ------------------------
 
 const letterCounter = (str) => {
-    str.split(" ").forEach(word =>{
-        let counter = 1;
-        let char = word[0];
-        for(let i=0; i <word.length -1 ; i++){
-            if (word [i] === word [i+1])
-            counter++;
-         else 
-            break;
-        }
-    })
-    return  ; 
-}
+     
+    
+
+ }
 
 
 
