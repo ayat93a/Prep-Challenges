@@ -99,7 +99,8 @@ const arrToStr = (arr) => {
 // ------------------------
 
 const letterCounter = (str) => {
-     
+      
+    
     
 
  }
