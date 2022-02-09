@@ -83,8 +83,12 @@ str = strArray.join(" ")
 const arrToStr = (arr) => {
 
 
- return arr.map (item=> arr.indexOf(item)==4? `${item},`:item).join(" ");
-       }
+    return arr.map (item=> arr.indexOf(item)==4? `${item},`:item).join(" ");
+}
+
+
+
+      
        
 // 5) ---------------------
 // 

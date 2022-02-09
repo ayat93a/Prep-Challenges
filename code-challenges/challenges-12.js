@@ -15,14 +15,9 @@
 // ------------------------
 
 const oddFiltration = (arr) => {
-    let filtration = [];
-    const odd =arr.filter(oddNum);
-    function oddNum (number){
-            if (number % 2 !== 0){
-                filtration.push(number)
-            }
-             
-         } 
+
+    let odd = arr.filter(item=>(item%2)!==0 )
+    return odd 
 }
 
 // 2) ---------------------
@@ -73,18 +68,17 @@ const oddFiltration = (arr) => {
 // ------------------------
 
 const cvsFiltration = (arr) => {
-    let result = {fullName : "" , tech : ""}
-    arr.map(item =>{
-        if (item.firstName !== null && item.LastName !==null && item.yearsOfExperience >4 ){
-            result.fullName = item.firstName + ' ' + item.LastName
-        }
-        arr.filter(checkJs)
-        function checkJs (item){
-         if (item.tech==="JS"){
-             result.tech = "JS"
-             return result.tech 
-         }} 
-        }) 
+
+    let cvsFiltration = []
+    let candidite={fullName: "" , tech: ""};
+    let result = arr.filter(item => item.firstName !== null && item.LastName !== null && item.yearsOfExperience >4 && item.tech == "JS");
+        let data = result.map(item =>{
+            candidite.fullName=item.firstName + " " + item.LastName ;
+            candidite.tech = item.tech;
+            cvsFiltration.push(candidite);
+        })
+    return cvsFiltration
+
 }
 
 // 3) ---------------------
@@ -97,9 +91,7 @@ const cvsFiltration = (arr) => {
 // ------------------------
 
 const vowelsFiltration = (arr) => {
-    // arr = ['car', 'boy', 'spy', 'building', 'why', 'dry' ]
-    // let result = Object.assign({},arr)
-    // console.log(result)
+  return arr.filter(word => !/(a|e|i|o|u)/g.test(word))
 } 
 
 // 4) ---------------------
@@ -117,7 +109,14 @@ const vowelsFiltration = (arr) => {
 // ------------------------
 
 const skillComparison = (arr1, arr2) => {
-    
+
+    let skillComparison = arr1.concat(arr2)
+    .filter(function (item, index, array) {
+  let notCommon= array.indexOf(item) == array.lastIndexOf(item);
+  return notCommon
+     })
+         return  skillComparison
+
 }
 
 
